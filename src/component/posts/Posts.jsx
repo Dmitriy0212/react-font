@@ -13,7 +13,7 @@ const Posts = () => {
 
     useEffect(() => {
         setAppState({ loading: true });
-        const apiUrl = 'http://178.20.153.133:8080/';
+        const apiUrl = 'https://178.20.153.133:4444/';
         axios.get(apiUrl).then((repos) => {
             const allRepos = repos.data;
             setAppState({ loading: false, repos: allRepos });
