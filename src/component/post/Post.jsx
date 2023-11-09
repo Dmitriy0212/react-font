@@ -16,7 +16,7 @@ const Post = () => {
 
     React.useEffect(() => {
         setAppState({ loading: true });
-        const apiUrl = `https://178.20.153.133:4444/post?id=${id}`;
+        const apiUrl = `https://178.20.153.133:8080/post?id=${id}`;
         axios.get(apiUrl).then((repos) => {
             const allRepos = repos.data;
             setAppState({ loading: false, repos: allRepos });
