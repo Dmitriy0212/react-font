@@ -3,27 +3,41 @@
     flex-direction: row;
     border: 1px solid rgb(91, 71, 171);
     border-radius: 5px;
-    margin: 10px;
     box-shadow: rgb(101, 89, 150) 3px 3px 3px, rgb(101, 89, 150) -1em 0px 2.4em;
     background: rgb(178, 198, 243);
+    margin: 10px;
 }
 
 .conteyner {
-    max-width: 100%;
+    max-width: 800px;
     min-width: 375px;
+    margin-left: 5px;
 }
 
 .postsPrevu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px;
     border: 1px solid rgb(91, 71, 171);
     border-radius: 5px;
-    padding: 5px;
+    margin: 5px;
 }
 
+.postHeder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(91, 71, 171);
+    border-radius: 5px;
+    margin: 5px;
+    flex-wrap: wrap;
+}
 .postsDescription {
     text-align: justify;
     overflow-wrap: break-word;
+    margin: 5px;
+}
+
+.postLine {
+    text-decoration: underline;
 }

@@ -1,0 +1,23 @@
+.contentRoot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentApp {
+    display: flex;
+    flex-direction: row
+}
+
+@media (max-width: 800px) {
+    .contentApp {
+        flex-direction: column;
+    }
+}
+
+.contentLinc {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}

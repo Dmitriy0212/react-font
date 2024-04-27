@@ -30,8 +30,18 @@ const Addpost = () => {
             postyearCreat: data.postyearCreat,
             genre: data.genre
         };
-        axios.post("http://178.20.153.133:8080/add", userData).then((response) => {
+        axios.post("http://localhost:8080/add", userData).then((response) => {
             console.log(response.status, response.data);
+            setData({
+                ...data,
+                postTitle: '',
+                postPhotoUrl: '',
+                postDescription: '',
+                postTegs: '',
+                postyearCreat: '',
+                genre: ''
+            })
+            debugger
         });
     };
     return (

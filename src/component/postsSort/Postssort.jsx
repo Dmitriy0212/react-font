@@ -1,53 +1,40 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import List from './List';
 import withListLoading from './WithListLoading';
-import { useSelector } from "react-redux";
-import Pugin from "../pugin/Pugin";
-import Storfirft from "./Storfirft";
 import { useParams } from 'react-router-dom';
+import { useSelector } from "react-redux";
+import Pugin from "../pugintegs/Pugin";
+import Stor from "./Stor";
 
-const Posts = (props) => {
+const Postssort = (props) => {
+    const { teg } = useParams();
+    const { url } = props
     const cash = useSelector(state => state.cash)
     const ListLoading = withListLoading(List);
     const [appState, setAppState] = useState({
         loading: false,
         repos: null,
     });
-    const { teg } = useParams();
-    const { page } = useParams();
-    const { url } = props
-    const [appState1, setAppState1] = useState('');
-    const [appState2, setAppState2] = useState('');
-    const [appState3, setAppState3] = useState('');
-    Storfirft()
+    Stor({ teg, url })
     useEffect(() => {
         if (cash || cash !== null) {
             setAppState({ loading: true });
             let mas = []
-            if (url !== undefined) {
-                setAppState1(url)
-            }
-            if (teg !== undefined) {
-                setAppState2(teg)
-            }
-            if (page !== undefined) {
-                setAppState3(page)
-            }
             for (let i = 0; i < 2; i++) {
                 mas.push(cash[i])
             }
             const allRepos = mas;
             setAppState({ loading: false, repos: allRepos });
         }
-    }, [setAppState, cash, page, teg, url, appState1, appState2, appState3, setAppState1, setAppState2, setAppState3]);
+    }, [setAppState, cash]);
     return (
         <>
             <div style={{ maxWidth: '800px', minWidth: '375px', marginLeft: '5px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <ListLoading isLoading={appState.loading} repos={appState.repos} />
-                <Pugin url={appState1} teg={appState2} page={appState3} />
+                <Pugin url={url} teg={teg}/>
             </div>
         </>
     );
 };
-export default Posts;
+export default Postssort;

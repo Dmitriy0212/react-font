@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import WithPostLoading from './WithPostLoading';
 import Loadpost from './Loadpost';
 import classes from "./Post.module.css";
+import Header from "../header/Header";
 
 const Post = () => {
     const { id } = useParams();
@@ -16,15 +17,17 @@ const Post = () => {
 
     React.useEffect(() => {
         setAppState({ loading: true });
-        const apiUrl = `https://powerful-tor-29400-3b2373853766.herokuapp.com/post?id=${id}`;
+        const apiUrl = `http://localhost:8080/post?id=${id}`;
         axios.get(apiUrl).then((repos) => {
             const allRepos = repos.data;
             setAppState({ loading: false, repos: allRepos });
         });
     }, [setAppState, id]);
 
+
     return (
         <>
+            <Header />
             <div className={classes.conteyner}>
                 <ListLoading isLoading={appState.loading} repos={appState.repos} />
             </div>
