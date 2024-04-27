@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const Storfirft = () => {
     const dispatch = useDispatch()
     useEffect(() => {
-        const apiUrl = 'https://powerful-tor-29400-3b2373853766.herokuapp.com/';
+        const apiUrl = 'https://powerful-tor-29400-3b2373853766.herokuapp.com/get';
         axios.get(apiUrl).then((repos) => {
             debugger
             dispatch({ type: "ADDDATA", data: repos.data })
