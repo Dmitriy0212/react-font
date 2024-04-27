@@ -17,7 +17,7 @@ const Post = () => {
 
     React.useEffect(() => {
         setAppState({ loading: true });
-        const apiUrl = `http://localhost:8080/post?id=${id}`;
+        const apiUrl = `https://powerful-tor-29400-3b2373853766.herokuapp.com/edit/post?id=${id}`;
         axios.get(apiUrl).then((repos) => {
             const allRepos = repos.data;
             setAppState({ loading: false, repos: allRepos });

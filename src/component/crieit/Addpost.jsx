@@ -30,7 +30,7 @@ const Addpost = () => {
             postyearCreat: data.postyearCreat,
             genre: data.genre
         };
-        axios.post("http://localhost:8080/add", userData).then((response) => {
+        axios.post("https://powerful-tor-29400-3b2373853766.herokuapp.com/add/post", userData).then((response) => {
             console.log(response.status, response.data);
             setData({
                 ...data,

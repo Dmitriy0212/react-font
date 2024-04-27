@@ -32,7 +32,7 @@ const Loadpost = (props) => {
             genre: data.genre,
             id: repos.id
         };
-        axios.post("http://localhost:8080/post/edit", userData).then((response) => {
+        axios.post("https://powerful-tor-29400-3b2373853766.herokuapp.com/edit/post", userData).then((response) => {
             console.log(response.status, response.data);
         });
 
