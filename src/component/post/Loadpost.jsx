@@ -42,7 +42,7 @@ const Loadpost = (props) => {
         };
         axios.post(Url+"/edit", userData).then((response) => {
             console.log(response.status, response.data);
-        },[Url]);
+        });
     }
 
     if (!appState1 || appState1.length === 0) return

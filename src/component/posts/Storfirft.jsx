@@ -12,6 +12,6 @@ const Storfirft = () => {
             
             dispatch({ type: "ADDDATA", data: repos.data })
         });
-    }, [dispatch],[Url]);
+    }, [dispatch]);
 }
 export default Storfirft;

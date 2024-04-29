@@ -42,7 +42,7 @@ const Addpost = () => {
                 postyearCreat: '',
                 genre: ''
             })
-        },[Url]);
+        });
     };
     return (
         <>

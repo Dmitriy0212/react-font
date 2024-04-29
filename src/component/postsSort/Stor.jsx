@@ -13,6 +13,6 @@ const Stor = (props) => {
         axios.get(apiUrl).then((repos) => {
             dispatch({ type: "ADDDATA", data: repos.data })
         });
-    }, [dispatch, teg, url],[Url]);
+    }, [dispatch, teg, url]);
 }
 export default Stor;
