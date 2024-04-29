@@ -7,9 +7,9 @@ const Storfirft = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         const apiUrl = Url;
-        debugger
+        
         axios.get(apiUrl).then((repos) => {
-            debugger
+            
             dispatch({ type: "ADDDATA", data: repos.data })
         });
     }, [dispatch],[Url]);

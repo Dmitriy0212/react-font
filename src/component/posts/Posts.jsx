@@ -23,7 +23,6 @@ const Posts = (props) => {
     Storfirft()
     useEffect(() => {
         if (cash || cash !== null) {
-            debugger
             setAppState({ loading: true });
             let mas = []
             if (url !== undefined) {

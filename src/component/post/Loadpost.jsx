@@ -4,7 +4,6 @@ import axios from 'axios';
 import Url from "../url/Url.js";
 
 const Loadpost = (props) => {
-    debugger
     const [appState1, setAppState1] = useState(props.repos);
     const [data, setData] = useState(props.repos);
     const [shou, setShou] = useState(true);
