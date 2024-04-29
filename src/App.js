@@ -10,12 +10,13 @@ import Addpost from "./component/crieit/Addpost";
 import Header from "./component/header/Header";
 import classes from "./index.module.css";
 function App() {
+  
   return (
     <>
       <div className={classes.contentApp}>
         <Header />
         <Routes>
-          <Route path="/" element={<Posts />} />
+          <Route exact path="/" element={<Posts />} />
           <Route path="/page/:page" element={<Poststopige />} />
           <Route path="/addpost" element={<Addpost />} />
           <Route path="/get/post/:id" element={<Post />} />
