@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import classes from "./Addpost.module.css";
+import Url from "../url/Url.js";
 
 const Addpost = () => {
     const [data, setData] = useState({
@@ -30,7 +31,7 @@ const Addpost = () => {
             postyearCreat: data.postyearCreat,
             genre: data.genre
         };
-        axios.post("https://powerful-tor-29400-3b2373853766.herokuapp.com/add/post", userData).then((response) => {
+        axios.post(Url+"/add/post", userData).then((response) => {
             console.log(response.status, response.data);
             setData({
                 ...data,
@@ -41,8 +42,7 @@ const Addpost = () => {
                 postyearCreat: '',
                 genre: ''
             })
-            debugger
-        });
+        },[Url]);
     };
     return (
         <>

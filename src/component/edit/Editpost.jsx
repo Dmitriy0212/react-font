@@ -6,6 +6,7 @@ import WithPostLoading from './WithPostLoading';
 import Loadpost from './Loadpost';
 import classes from "./Post.module.css";
 import Header from "../header/Header";
+import Url from "../url/Url.js";
 
 const Post = () => {
     const { id } = useParams();
@@ -17,12 +18,12 @@ const Post = () => {
 
     React.useEffect(() => {
         setAppState({ loading: true });
-        const apiUrl = `https://powerful-tor-29400-3b2373853766.herokuapp.com/edit/post?id=${id}`;
+        const apiUrl = Url+`/edit/post?id=${id}`;
         axios.get(apiUrl).then((repos) => {
             const allRepos = repos.data;
             setAppState({ loading: false, repos: allRepos });
         });
-    }, [setAppState, id]);
+    }, [setAppState, id],[Url]);
 
 
     return (

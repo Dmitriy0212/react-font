@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import classes from "./Post.module.css";
 import axios from 'axios';
+import Url from "../url/Url.js";
 
 const Loadpost = (props) => {
+    debugger
     const [appState1, setAppState1] = useState(props.repos);
     const [data, setData] = useState(props.repos);
     const [shou, setShou] = useState(true);
@@ -39,9 +41,9 @@ const Loadpost = (props) => {
             genre: data.genre,
             id: props.repos.id
         };
-        axios.post("https://powerful-tor-29400-3b2373853766.herokuapp.com/edit", userData).then((response) => {
+        axios.post(Url+"/edit", userData).then((response) => {
             console.log(response.status, response.data);
-        });
+        },[Url]);
     }
 
     if (!appState1 || appState1.length === 0) return

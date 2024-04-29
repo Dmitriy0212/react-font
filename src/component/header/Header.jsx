@@ -2,6 +2,7 @@ import React from 'react';
 import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
 import Under from "./Under.jsx";
+import Url from "../url/Url.js";
 
 const Header = (props) => {
 
@@ -10,9 +11,9 @@ const Header = (props) => {
             <header className={classes.header}>
                 <Link className={classes.myLink} to="/">Основная страница</Link>
                 <Link className={classes.myLink} to="/addpost">Добавить пост</Link>
-                <Under name={'Выбот тайтла по тегам'} url={'https://powerful-tor-29400-3b2373853766.herokuapp.com/tegs/post'} lin={'teg'} />
-                <Under name={'Выбот тайтла по годам'} url={'https://powerful-tor-29400-3b2373853766.herokuapp.com/year/post'} lin={'year'} />
-                <Under name={'Выбот тайтла по жанру'} url={'https://powerful-tor-29400-3b2373853766.herokuapp.com/genr/post'} lin={'genre'} />
+                <Under name={'Выбот тайтла по тегам'} url={Url+'/tegs/post'} lin={'teg'} />
+                <Under name={'Выбот тайтла по годам'} url={Url+'/year/post'} lin={'year'} />
+                <Under name={'Выбот тайтла по жанру'} url={Url+'/genr/post'} lin={'genre'} />
             </header>
         </div>
     );

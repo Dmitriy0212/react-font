@@ -14,11 +14,10 @@ const Pugin = (props) => {
         repos: null,
         links: null,
     });
-
     useEffect(() => {
         if (props.url !== undefined && props.url !== null && props.url !== '') {
-            setAppState1(props.url+'/')
-            setAppState2(props.teg+'/')
+            setAppState1(props.url + '/')
+            setAppState2(props.teg + '/')
         }
         else if (props.url === '' && props.url === undefined) {
             setAppState1('')
@@ -32,12 +31,22 @@ const Pugin = (props) => {
             let mas = []
             let mas1 = []
             let pige = 0;
-            for (let i = 0; i < Math.ceil(cash.length / 2); i++) {
-                mas.push(pige += 1)
-                mas1.push(appState1 + appState2 + 'page/' + Number(i + 1))
+            
+            if (cash.mas1 === undefined) {
+                for (let i = 0; i < Math.ceil(cash.mas1.length / 2); i++) {
+                    mas.push(pige += 1)
+                    mas1.push(appState1 + appState2 + 'page/' + Number(i + 1))
+                }
             }
+            if (cash.mas1 !== null) {
+                for (let i = 0; i < Math.ceil(cash.mas1.length / 2); i++) {
+                    mas.push(pige += 1)
+                    mas1.push(appState1 + appState2 + 'page/' + Number(i + 1))
+                }
+            }
+
             const allRepos = mas;
-            setAppState({ loading: false, repos: allRepos, links: mas1 });
+            setAppState({ repos: allRepos, links: mas1 });
         }
 
     }, [setAppState, cash, appState1, appState2]);

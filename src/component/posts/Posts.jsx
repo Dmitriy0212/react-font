@@ -23,6 +23,7 @@ const Posts = (props) => {
     Storfirft()
     useEffect(() => {
         if (cash || cash !== null) {
+            debugger
             setAppState({ loading: true });
             let mas = []
             if (url !== undefined) {
@@ -35,7 +36,7 @@ const Posts = (props) => {
                 setAppState3(page)
             }
             for (let i = 0; i < 2; i++) {
-                mas.push(cash[i])
+                mas.push(cash.mas1[i])
             }
             const allRepos = mas;
             setAppState({ loading: false, repos: allRepos });

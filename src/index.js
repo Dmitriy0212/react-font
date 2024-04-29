@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import App from './App';
 import classes from "./index.module.css";
 import { legacy_createStore as createStore } from 'redux'
+import { StrictMode } from 'react';
 
 const defolt = {
   cash: null
@@ -22,11 +23,14 @@ const store = createStore(reducer);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className={classes.contentRoot}>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <StrictMode>
+      <Provider store={store}>
+        <BrowserRouter>
+
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </StrictMode>
   </div>
 );
 

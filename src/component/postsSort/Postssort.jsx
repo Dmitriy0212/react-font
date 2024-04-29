@@ -21,18 +21,68 @@ const Postssort = (props) => {
         if (cash || cash !== null) {
             setAppState({ loading: true });
             let mas = []
-            for (let i = 0; i < 2; i++) {
-                mas.push(cash[i])
+            let a = ''
+
+            switch (url) {
+
+                case "teg":
+                    a = 'tegs'
+                    for (let i = 0; i < 2; i++) {
+                        if (cash.mas1[i] === undefined) {
+                            break
+                        }
+                        else {
+                            for (let j = 0; j < cash.mas1[i][a].length; j++) {
+                                if (cash.mas1[i][a][j].toLowerCase() === teg.toLowerCase()) {
+                                    mas.push(cash.mas1[i])
+                                }
+                            }
+                        }
+
+                    }
+                    break;
+                case "year":
+                    a = 'yearCreat'
+                    for (let i = 0; i < 2; i++) {
+                        
+                        if (cash.mas1[i] === undefined) {
+                            break
+                        }
+                        else if (cash.mas1[i][a] === teg) {
+                            mas.push(cash.mas1[i])
+                        }
+                    }
+                    setAppState({ repos: mas });
+                    break;
+                case "genre":
+                    a = 'genre'
+                    for (let i = 0; i < 2; i++) {
+                        if (cash.mas1[i] === undefined) {
+                            break
+                        }
+                        else {
+                            for (let j = 0; j < cash.mas1[i][a].length; j++) {
+                                if (cash.mas1[i][a][j].toLowerCase() === teg.toLowerCase()) {
+                                    mas.push(cash.mas1[i])
+                                }
+                            }
+                        }
+                    }
+                    setAppState({ repos: mas });
+                    break;
+                default:
+                    console.log("Sorry");
             }
             const allRepos = mas;
-            setAppState({ loading: false, repos: allRepos });
+            setAppState({ repos: allRepos });
         }
-    }, [setAppState, cash]);
+    }, [setAppState, cash, url, teg]);
+
     return (
         <>
             <div style={{ maxWidth: '800px', minWidth: '375px', marginLeft: '5px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <ListLoading isLoading={appState.loading} repos={appState.repos} />
-                <Pugin url={url} teg={teg}/>
+                <Pugin url={url} teg={teg} mas15={appState} />
             </div>
         </>
     );

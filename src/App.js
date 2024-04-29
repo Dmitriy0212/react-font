@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Posts />} />
           <Route path="/page/:page" element={<Poststopige />} />
           <Route path="/addpost" element={<Addpost />} />
-          <Route path="/post/:id" element={<Post />} />
+          <Route path="/get/post/:id" element={<Post />} />
           <Route path="/edit/:id" element={<Editpost />} />
           <Route path="/teg/:teg" element={<Postssort url={'teg'} />} />
           <Route path="/teg/:teg/page/:page" element={<Postssortpage url={'teg'} />} />

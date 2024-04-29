@@ -19,7 +19,7 @@ const List = (props) => {
                         <div key={repo.id} className={classes.postsContent}>
                         <div className={classes.postsPrevu}>
                             <h3>
-                                <Link className={classes.postsLink} to={`/post/${repo.id}`}>{repo.postTitle}</Link>
+                                <Link className={classes.postsLink} to={`/get/post/${repo.id}`}>{repo.postTitle}</Link>
                             </h3>
                             <img style={{ margin: "5px", minHeight: "280px", borderRadius: "10px" }} src={repo.postPhotoUrl} alt="Ошибка загрузки постера" />
                         </div>

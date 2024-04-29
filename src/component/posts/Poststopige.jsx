@@ -34,17 +34,15 @@ const Posts = (props) => {
             if (a > 2) {
                 a = a * 2 - 2
 
-                if (a === cash.length - 1) {
+                if (a === cash.mas1.length - 1) {
                     b = 1
                 }
             }
             else if (Number(page) === 1) {
-                debugger
             }
             let mas = []
             for (let i = a; i < a + b; i++) {
-                debugger
-                mas.push(cash[i])
+                mas.push(cash.mas1[i])
             }
             const allRepos = mas;
             setAppState({ loading: false, repos: allRepos });

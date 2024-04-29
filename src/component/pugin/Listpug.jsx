@@ -4,6 +4,7 @@ import { useParams, useResolvedPath } from 'react-router-dom';
 import classes from "./Listpug.module.css";
 
 const Listpug = (props) => {
+    
     const { page } = useParams();
     const { pathname } = useResolvedPath();
     const { repos } = props;
