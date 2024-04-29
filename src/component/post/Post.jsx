@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import WithPostLoading from './WithPostLoading';
 import Loadpost from './Loadpost';
 import classes from "./Post.module.css";
-import Url from "../url/Url.js";
+import Url from "../url/Url";
 
 const Post = () => {
     const { id } = useParams();
@@ -17,12 +17,12 @@ const Post = () => {
 
     React.useEffect(() => {
         setAppState({ loading: true });
-        const apiUrl = Url+`/get/post?id=${id}`;
+        const apiUrl = Url + `/get/post?id=${id}`;
         axios.get(apiUrl).then((repos) => {
             const allRepos = repos.data;
             setAppState({ loading: false, repos: allRepos });
         });
-    }, [setAppState, id,Url]);
+    }, [setAppState, id]);
 
     return (
         <>
