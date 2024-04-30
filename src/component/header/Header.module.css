@@ -77,18 +77,16 @@
 }
 
 .headerToSortVisibl {
-    display: flex;
-    width: 85%;
-    border: 1px solid rgb(91, 71, 171);
+    border: 1px solid #5b47ab;
     border-radius: 5px;
-    margin: 10px;
-    box-shadow: rgb(101, 89, 150) 3px 3px 3px, rgb(101, 89, 150) -1em 0px 2.4em;
+    box-shadow: 3px 3px 3px #655996, -1em 0 2.4em #655996;
+    display: flex;
     flex-flow: wrap;
-    place-content: center;
+    margin: 10px;
     padding: 10px;
-    flex-wrap: nowrap;
+    place-content: center;
     flex-direction: column;
-    align-items: stretch;
+    flex-wrap: nowrap;
 }
 
 .myLinkOn {
