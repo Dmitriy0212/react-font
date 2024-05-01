@@ -10,7 +10,7 @@ import Addpost from "./component/crieit/Addpost";
 import Header from "./component/header/Header";
 import classes from "./index.module.css";
 function App() {
-  
+
   return (
     <>
       <div className={classes.contentApp}>
