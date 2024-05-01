@@ -16,7 +16,7 @@ function App() {
       <div className={classes.contentApp}>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Posts />} />
+          <Route index="/" element={<Posts />} />
           <Route path="/page/:page" element={<Poststopige />} />
           <Route path="/addpost" element={<Addpost />} />
           <Route path="/get/post/:id" element={<Post />} />
