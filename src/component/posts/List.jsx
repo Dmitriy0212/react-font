@@ -14,6 +14,7 @@ const List = (props) => {
     return (
         <>
             {repos.map((repo) => {
+                
                 return (
                     <div key={repo.id} className={classes.postsContent}>
                         <div className={classes.postsPrevu}>

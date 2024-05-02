@@ -8,19 +8,20 @@ import Storfirft from "./Storfirft";
 import { useParams } from 'react-router-dom';
 
 const Posts = (props) => {
+    
     const cash = useSelector(state => state.cash)
     const ListLoading = withListLoading(List);
     const [appState, setAppState] = useState({
         loading: false,
         repos: null,
     });
+    Storfirft()
     const { teg } = useParams();
     const { page } = useParams();
     const { url } = props
     const [appState1, setAppState1] = useState('');
     const [appState2, setAppState2] = useState('');
     const [appState3, setAppState3] = useState('');
-    Storfirft()
     useEffect(() => {
         if (cash || cash !== null) {
             setAppState({ loading: true });
@@ -35,6 +36,9 @@ const Posts = (props) => {
                 setAppState3(page)
             }
             for (let i = 0; i < 2; i++) {
+                if (cash.mas1[i] === undefined) {
+                    break
+                }
                 mas.push(cash.mas1[i])
             }
             const allRepos = mas;
