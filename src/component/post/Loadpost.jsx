@@ -40,7 +40,7 @@ const Loadpost = (props) => {
             genre: data.genre,
             id: props.repos.id
         };
-        axios.post(Url+"/edit", userData).then((response) => {
+        axios.post(Url+"/edit/post", userData).then((response) => {
             console.log(response.status, response.data);
         });
     }
