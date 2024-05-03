@@ -40,7 +40,7 @@ const Loadpost = (props) => {
             genre: data.genre,
             id: props.repos.id
         };
-        axios.post(Url+"/edit/post", userData).then((response) => {
+        axios.post(Url + "/edit/post", userData).then((response) => {
             console.log(response.status, response.data);
         });
     }
@@ -59,7 +59,7 @@ const Loadpost = (props) => {
                 <div>
                     <div className={classes.postHeder}>
                         {shou === true ?
-                            <h3 style={{ margin: "5px" }}>{appState1.postTitle}</h3> :
+                            <h3 style={{ margin: "5px", color: "aqua" }}>{appState1.postTitle}</h3> :
                             <input type="text" name="postTitle" value={data.postTitle} onChange={handleChange} placeholder='Введите название тайтла' />
                         }
                         {shou === true ?
