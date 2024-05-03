@@ -28,7 +28,7 @@ const Under = (props) => {
     }
     return (
         <>
-            <div  className={show!==true ? classes.myLink :classes.myLinkOn} onClick={fanc}>{props.name}
+            <div  className={show!==true ? classes.myLinkA :classes.myLinkOn} onClick={fanc}>{props.name}
                 {show && <ListLoading className={classes.headerToSortVisibl} isLoading={appState.loading} repos={appState.repos} lin={props.lin} />}
             </div>
 

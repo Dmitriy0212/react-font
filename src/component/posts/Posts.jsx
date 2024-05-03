@@ -7,6 +7,7 @@ import Pugin from "../pugin/Pugin";
 import Storfirft from "./Storfirft";
 import { useParams } from 'react-router-dom';
 
+
 const Posts = (props) => {
     
     const cash = useSelector(state => state.cash)

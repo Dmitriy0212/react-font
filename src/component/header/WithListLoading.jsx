@@ -6,7 +6,7 @@ function WithListLoading(Component) {
     return (
       <>
         <div style={{
-          widows: "100%", height: "300px", border: "solid 1px #5b47ab",
+          widows: "100%", height: "10px", border: "solid 1px #5b47ab",
           borderRadius: "5px",
           margin: "10px",
           boxShadow: "3px 3px 3px #655996, -1em 0 2.4em #655996",
