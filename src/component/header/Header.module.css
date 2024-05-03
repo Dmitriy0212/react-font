@@ -133,7 +133,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .myLinkA {
         font-size: 10px;
     }
