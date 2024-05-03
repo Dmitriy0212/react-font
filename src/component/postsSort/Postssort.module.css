@@ -5,7 +5,7 @@
     border-radius: 5px;
     margin: 10px;
     box-shadow: rgb(101, 89, 150) 3px 3px 3px, rgb(101, 89, 150) -1em 0px 2.4em;
-    background: rgb(178, 198, 243);
+    background: content-box radial-gradient(rgb(71 79 252), rgb(10, 50, 63));
 }
 
 .postsPrevu {
