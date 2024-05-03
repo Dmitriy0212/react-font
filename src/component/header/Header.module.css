@@ -124,7 +124,7 @@
     align-items: center;
 }
 
-@media (max-width: 530px) {
+@media (max-width: 550px) {
     .myLinkA {
         font-size: 12px;
     }
