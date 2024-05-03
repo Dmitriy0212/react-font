@@ -123,3 +123,21 @@
     color: blue;
     align-items: center;
 }
+
+@media (max-width: 530px) {
+    .myLinkA {
+        font-size: 12px;
+    }
+    .myLinkOn {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .myLinkA {
+        font-size: 10px;
+    }
+    .myLinkOn {
+        font-size: 10px;
+    }
+}
