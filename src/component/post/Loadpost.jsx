@@ -2,13 +2,36 @@ import React, { useState } from 'react';
 import classes from "./Post.module.css";
 import axios from 'axios';
 import Url from "../url/Url.js";
+import dataImg from "./pngwing.png";
+
+
+
 
 const Loadpost = (props) => {
     const [appState1, setAppState1] = useState(props.repos);
     const [data, setData] = useState(props.repos);
+    const dataIm = dataImg;
+    const [dataButton, setDataButton] = useState(classes.imgButton);
+    const [shouDescription1, setShouDescription1] = useState(classes.postsDescription1);
     const [shou, setShou] = useState(true);
+    const [buttonTitle, setbuttonTitle] = useState("Развернуть описание");
     function clickHandler() {
         setShou(false)
+    }
+
+    function clickHandler1() {
+        if (shouDescription1 === classes.postsDescription) {
+            setShouDescription1(classes.postsDescription1)
+            setDataButton(classes.imgButton)
+            setbuttonTitle("Развернуть описание")
+            return
+        }
+        else if (shouDescription1 === classes.postsDescription1) {
+            setShouDescription1(classes.postsDescription)
+            setDataButton(classes.imgButtonOn)
+            setbuttonTitle("Свернуть описание")
+            return
+        }
     }
     const handleChange = (e) => {
         const value = e.target.value;
@@ -70,9 +93,10 @@ const Loadpost = (props) => {
                     </div>
                     <div className={classes.postsPrevu}>
                         {shou === true ?
-                            <div className={classes.postsDescription}>{appState1.postDescription}</div> :
+                            <div className={shouDescription1}>{appState1.postDescription}</div> :
                             <textarea type="text" name="postDescription" cols="30" rows="10" value={data.postDescription} onChange={handleChange} placeholder='Описание' ></textarea>
                         }
+                        <button title={buttonTitle} className={classes.postsDescriptionOn} onClick={clickHandler1}><img className={dataButton} src={dataIm} alt="Ошибка загрузки постера" /></button>
                         {shou === true ?
                             <div className={classes.postsDescription}>Анонсирован в <span className={classes.postLine}>{appState1.yearCreat}</span>г.</div> :
                             <input type="text" name="yearCreat" value={data.yearCreat} onChange={handleChange} placeholder='Год выхода' />
@@ -95,7 +119,7 @@ const Loadpost = (props) => {
                         }
                     </div>
                 </div>
-            </form>
+            </form >
         </>
     );
 };

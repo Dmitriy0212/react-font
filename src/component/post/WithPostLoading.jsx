@@ -12,7 +12,6 @@ function WithPostLoading(Component) {
           boxShadow: "3px 3px 3px #655996, -1em 0 2.4em #655996",
           textAlign:"center"
         }}>Hold on, fetching data may take some time :)</div>
-        
       </>
     );
   };
