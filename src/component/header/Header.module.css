@@ -1,5 +1,5 @@
 .myLink {
-    filter: brightness(0.2);
+    filter: brightness(0.5);
     transition: 0.5s;
     text-decoration: none;
     display: flex;
