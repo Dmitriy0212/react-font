@@ -54,7 +54,7 @@
 
 .postsDescriptionOn {
     margin: 0 auto;
-    min-width: 98%;
+    width: 10px;
     visibility: hidden;
     position: absolute;
 }
@@ -77,6 +77,7 @@
     }
 
     .postsDescriptionOn {
+        width: 98%;
         visibility: visible;
         display: flex;
         position: relative;
