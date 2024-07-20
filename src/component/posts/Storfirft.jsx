@@ -9,7 +9,7 @@ const Storfirft = () => {
         const apiUrl = Url;
         
         axios.get(apiUrl).then((repos) => {
-            debugger
+            console.log(repos)
             dispatch({ type: "ADDDATA", data: repos.data })
         });
     }, [dispatch]);
