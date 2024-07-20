@@ -27,19 +27,19 @@ const Pugin = (props) => {
 
     useEffect(() => {
         setAppState({ loading: true });
-        if (cash || cash !== null) {
+        if (cash.data || cash.data !== null) {
             let mas = []
             let mas1 = []
             let pige = 0;
             
-            if (cash.mas1 === undefined) {
-                for (let i = 0; i < Math.ceil(cash.mas1.length / 2); i++) {
+            if (cash.data.mas1 === undefined) {
+                for (let i = 0; i < Math.ceil(cash.data.mas1.length / 2); i++) {
                     mas.push(pige += 1)
                     mas1.push(appState1 + appState2 + 'page/' + Number(i + 1))
                 }
             }
-            if (cash.mas1 !== null) {
-                for (let i = 0; i < Math.ceil(cash.mas1.length / 2); i++) {
+            if (cash.data.mas1 !== null) {
+                for (let i = 0; i < Math.ceil(cash.data.mas1.length / 2); i++) {
                     mas.push(pige += 1)
                     mas1.push(appState1 + appState2 + 'page/' + Number(i + 1))
                 }
