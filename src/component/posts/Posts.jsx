@@ -9,7 +9,6 @@ import { useParams } from 'react-router-dom';
 
 
 const Posts = (props) => {
-    
     const cash = useSelector(state => state.cash)
     const ListLoading = withListLoading(List);
     const [appState, setAppState] = useState({
